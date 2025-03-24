@@ -52,11 +52,27 @@ export default function Home() {
     saveWords(resetWords);
   };
   
+  // Полная перезагрузка слов из начального набора
+  const handleReloadWords = () => {
+    localStorage.removeItem('words');
+    const initialWords = loadWords();
+    setWords(initialWords);
+  };
+  
   // Проверка, все ли слова выучены
   const allWordsLearned = words.length > 0 && words.every(word => word.correctAnswers >= 3);
   
   return (
     <div className="flex flex-col items-center">
+      <div className="flex justify-between items-center w-full mb-6">
+        <h1 className="text-2xl font-bold text-white">Изучение английских слов</h1>
+        <button
+          onClick={handleReloadWords}
+          className="bg-red-600 md:hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+        >
+          Обновить слова
+        </button>
+      </div>
       
       <StatsCard words={words} onReset={handleReset} />
       
@@ -74,7 +90,7 @@ export default function Home() {
           <p className="text-gray-300 mb-6">Вы выучили все слова!</p>
           <button
             onClick={handleReset}
-            className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+            className="bg-purple-600 md:hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
           >
             Начать заново
           </button>
