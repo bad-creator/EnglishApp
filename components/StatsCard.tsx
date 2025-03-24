@@ -24,7 +24,7 @@ export default function StatsCard({ words, onReset }: StatsCardProps) {
       </div>
       
       <div className="flex justify-between text-sm">
-        <p className="text-gray-400">Правильных ответов: {totalCorrectAnswers}/{totalPossibleAnswers}</p>
+        <p className="text-gray-400">Изучено слов: {learnedWords}/{totalWords}</p>
         <p className="text-purple-400">{progressPercentage}%</p>
       </div>
       
