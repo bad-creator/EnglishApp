@@ -1,0 +1,16 @@
+/* eslint-disable */
+/* stylelint-disable */
+/* CSS Lint ignore */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #ffffff;
+  --background: #121212;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+} 
