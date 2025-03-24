@@ -10,7 +10,17 @@
   --background: #121212;
 }
 
+html, body {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
+  -webkit-overflow-scrolling: touch;
 } 

@@ -57,7 +57,6 @@ export default function Home() {
   
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-2xl font-bold text-white mb-6">Изучение английских слов</h1>
       
       <StatsCard words={words} onReset={handleReset} />
       

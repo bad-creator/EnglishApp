@@ -7,8 +7,10 @@ interface StatsCardProps {
 
 export default function StatsCard({ words, onReset }: StatsCardProps) {
   const totalWords = words.length;
+  const totalPossibleAnswers = totalWords * 3; // Максимальное количество правильных ответов
+  const totalCorrectAnswers = words.reduce((sum, word) => sum + word.correctAnswers, 0);
+  const progressPercentage = Math.round((totalCorrectAnswers / totalPossibleAnswers) * 100);
   const learnedWords = words.filter(word => word.correctAnswers >= 3).length;
-  const progressPercentage = Math.round((learnedWords / totalWords) * 100);
 
   return (
     <div className="bg-dark-card p-6 rounded-lg shadow-lg w-full mb-6">
@@ -22,7 +24,7 @@ export default function StatsCard({ words, onReset }: StatsCardProps) {
       </div>
       
       <div className="flex justify-between text-sm">
-        <p className="text-gray-400">Изучено слов: {learnedWords}/{totalWords}</p>
+        <p className="text-gray-400">Правильных ответов: {totalCorrectAnswers}/{totalPossibleAnswers}</p>
         <p className="text-purple-400">{progressPercentage}%</p>
       </div>
       

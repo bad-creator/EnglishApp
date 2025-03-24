@@ -40,7 +40,7 @@ export default function WordCard({ word, options, onAnswer }: WordCardProps) {
   };
   
   return (
-    <div className="flex flex-col items-center space-y-6 py-6">
+    <div className="flex flex-col items-center space-y-6 py-6 w-full">
       <div className="bg-dark-card p-8 rounded-lg shadow-lg w-full">
         <h2 className="text-3xl font-bold text-center text-white mb-2">{word.english}</h2>
         <p className="text-sm text-center text-gray-400">
@@ -53,7 +53,7 @@ export default function WordCard({ word, options, onAnswer }: WordCardProps) {
           <button
             key={index}
             onClick={() => handleSelectAnswer(option)}
-            className={`${getButtonClass(option)} py-4 px-6 rounded-lg text-lg font-medium transition-colors duration-200`}
+            className={`${getButtonClass(option)} py-4 px-6 rounded-lg text-lg font-medium transition-colors duration-200 w-full`}
             disabled={isAnswered}
           >
             {option}
