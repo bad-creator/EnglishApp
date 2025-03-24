@@ -51,7 +51,7 @@ export default function Home() {
     setWords(resetWords);
     saveWords(resetWords);
   };
-  
+
   // Полная перезагрузка слов из начального набора
   const handleReloadWords = () => {
     localStorage.removeItem('words');
