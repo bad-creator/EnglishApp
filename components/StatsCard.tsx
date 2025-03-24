@@ -33,7 +33,7 @@ export default function StatsCard({ words, onReset }: StatsCardProps) {
           <p className="text-green-400 mb-4">Поздравляем! Вы выучили все слова!</p>
           <button
             onClick={onReset}
-            className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg w-full transition-colors duration-200"
+            className="bg-purple-600 md:hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg w-full transition-colors duration-200"
           >
             Начать заново
           </button>

@@ -29,7 +29,7 @@ export default function WordCard({ word, options, onAnswer }: WordCardProps) {
   
   const getButtonClass = (option: string) => {
     if (!isAnswered || selectedAnswer !== option) {
-      return 'bg-dark-card hover:bg-gray-700 text-white';
+      return 'bg-dark-card md:hover:bg-gray-700 text-white';
     }
     
     if (option === word.russian) {
