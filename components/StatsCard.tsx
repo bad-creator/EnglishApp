@@ -25,7 +25,7 @@ export default function StatsCard({ words, onReset }: StatsCardProps) {
       
       <div className="flex justify-between text-sm">
         <p className="text-gray-400">Learned words: {learnedWords}/{totalWords}</p>
-        <p className="text-purple-400">{progressPercentage}%</p>
+        <p className="text-purple-400">{progressPercentage.toFixed(2)}%</p>
       </div>
       
       {learnedWords === totalWords && (
