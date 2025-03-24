@@ -86,13 +86,13 @@ export default function Home() {
       
       {allWordsLearned && (
         <div className="bg-dark-card p-8 rounded-lg shadow-lg w-full text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">🎉 Поздравляем! 🎉</h2>
-          <p className="text-gray-300 mb-6">Вы выучили все слова!</p>
+          <h2 className="text-2xl font-bold text-white mb-4">🎉 Congratulations! 🎉</h2>
+          <p className="text-gray-300 mb-6">You have learned all the words!</p>
           <button
             onClick={handleReset}
             className="bg-purple-600 md:hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
           >
-            Начать заново
+            Start over
           </button>
         </div>
       )}

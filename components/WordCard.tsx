@@ -44,7 +44,7 @@ export default function WordCard({ word, options, onAnswer }: WordCardProps) {
       <div className="bg-dark-card p-8 rounded-lg shadow-lg w-full">
         <h2 className="text-3xl font-bold text-center text-white mb-2">{word.english}</h2>
         <p className="text-sm text-center text-gray-400">
-          Правильных ответов: {word.correctAnswers}/3
+          Correct answers: {word.correctAnswers}/3
         </p>
       </div>
       
